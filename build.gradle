@@ -35,8 +35,9 @@ minecraft {
 repositories {
     maven { // The repo from which to get waila
         name "Mobius Repo"
-        // url "http://mobiusstrip.eu/maven"
-        url "http://tehnut.info/maven"
+        url "http://mobiusstrip.eu/maven"
+        // url "http://tehnut.info/maven"
+        // url "https://maven.tehnut.info"
     }
 
     maven { // TheOneProbe
@@ -51,7 +52,8 @@ repositories {
 
     maven { // jei by ip, because travis couldn't resolve it?!
         name "Progwml Repo"
-        url "http://104.168.20.187/files/maven"
+        //url "http://104.168.20.187/files/maven"
+        url "https://dvs1.progwml6.com/files/maven/"
     }
 
     maven {
@@ -64,10 +66,13 @@ repositories {
         url = "http://chickenbones.net/maven/"
     }
 
-    maven {
+    // Repo doesn't contain refinedstorage:refinedstorage:1.6.13:api anymore so it has to be built manually and installed into maven local
+    // https://github.com/refinedmods/refinedstorage/commit/f298e37a278f8eb1bc7593da8bc8b9b53976ce23
+    mavenLocal()
+    /*maven {
         name = "refinedstorage"
-        url = "https://repo.raoulvdberge.com/"
-    }
+        url = "https://repo.refinedmods.com/"
+    }*/
 
     maven {
         name = "opencomputers"
